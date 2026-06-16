@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg-main: var(--main-bg);
+  --color-bg-card: var(--card-bg);
+  --color-border-subtle: var(--border-color);
+  --color-text-main: var(--text-color);
+  --color-text-muted: var(--text-secondary);
+}
+
+/* 🌙 Native Dark Theme Parameters */
+:root {
+  --main-bg: #05070a;
+  --card-bg: #0d121f;
+  --border-color: rgba(30, 58, 138, 0.4);
+  --text-color: #f1f5f9;      /* slate-100 */
+  --text-secondary: #94a3b8;  /* slate-400 */
+}
+
+/* ☀️ High-Contrast Light Theme Overrides */
+:root.light-theme {
+  --main-bg: #f8fafc;         /* slate-50 (Clean, bright backdrop) */
+  --card-bg: #ffffff;         /* Pure white structural panels */
+  --border-color: #cbd5e1;    /* slate-300 (Thick, clearly visible borders) */
+  --text-color: #0f172a;      /* slate-900 (Deep ink text for perfect legibility) */
+  --text-secondary: #475569;  /* slate-600 (Dark gray subheadings) */
+}
+
+body {
+  background-color: var(--main-bg);
+  color: var(--text-color);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Enforce deep text color inheritance for sub-headings across both modules */
+h1, h2, h3, p, span {
+  color: currentColor;
+}
