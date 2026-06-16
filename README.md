@@ -29,6 +29,7 @@ Overall Testing Accuracy : 0.9845 | Macro F1: 0.9845
               precision    recall  f1-score   support
         Real     0.9778    0.9915    0.9846      3195
         Fake     0.9914    0.9775    0.9844      3195
+```
 Fake Precision (99.14%): Flags forgeries with near-absolute statistical confidence.
 
 ⚡ Setup & Execution
