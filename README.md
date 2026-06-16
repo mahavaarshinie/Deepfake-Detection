@@ -34,12 +34,16 @@ Fake Precision (99.14%): Flags forgeries with near-absolute statistical confiden
 
 ⚡ Setup & Execution
 1. Backend Initialization
-Bash
+```
 cd backend
 .\venv\Scripts\activate
 uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+```
+
 2. Frontend Initialization
-Bash
+```
 cd frontend
-npm install && npm run dev
+npm install && npm run dev\
+```
+
 Open http://localhost:3000, perform a hard refresh (Ctrl + F5), and upload a pre-cropped square face frame to stream real-time confidence scores and forensic category breakdowns.
